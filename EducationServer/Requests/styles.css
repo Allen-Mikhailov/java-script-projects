@@ -1,0 +1,36 @@
+body {
+    background-color: rgb(31, 31, 31);
+    font-family: Arial;
+}
+
+p {
+    color: white;
+    text-align: center;
+}
+
+hr {
+    color: rgb(211, 211, 211);
+    text-align: center;
+    overflow: visible;
+    top: -100px;
+}
+
+a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+a.button {
+    padding: 100px, 10px;
+    /* font-size: 200%; */
+    width: 400px;
+}
+
+a.button:hover {
+    /* font-size: 210%; */
+}
+
+canvas {
+    margin: 0px;
+}

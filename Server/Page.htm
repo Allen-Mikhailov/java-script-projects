@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Test</title>
+
+
+    
+</head>
+<body>
+    <p id = "Display">Connected</b>
+
+    <form action="/action_page.php">
+        <label for="Username">Username:</label><br>
+        <input type="text" id="Username" name="Username" value=""><br>
+        <label for="Password">Password:</label><br>
+        <input type="text" id="Password" name="Password" value=""><br><br>
+    </form>
+
+    <button type="button" onclick="LoginRequest()">Login</button>
+    <button type="button" onclick="CreateUserRequest()">CreateUser</button>
+
+    <script>
+        var Username = document.getElementById("Username");
+        var Password = document.getElementById("Password");
+        var Display = document.getElementById("Display");
+        function LoginRequest()
+        {
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("GET", `http://localhost:8000/Login/${Username.value}/${Password.value}`, true);
+            xhttp.send();
+            var res = "";
+            xhttp.onreadystatechange = function() {
+                if (this.status == 200) {
+                    res = this.responseText;
+                    Display.innerHTML = res;
+                    console.log(res);
+                }
+            }
+        };
+
+        function CreateUserRequest()
+        {
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("GET", `http://localhost:8000/CreateUser/${Username.value}/${Password.value}`, true);
+            xhttp.send();
+            var res = "";
+            xhttp.onreadystatechange = function() {
+                if (this.status == 200) {
+                    res = this.responseText;
+                    Display.innerHTML = res;
+                    console.log(Display.innerHTML);
+                }
+            }
+        }
+    </script>
+
+    
+</body>
+</html>

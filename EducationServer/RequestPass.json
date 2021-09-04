@@ -1,0 +1,33 @@
+{
+    "/": {
+        "header": "text/html",
+        "FileName": "home.htm"
+    },
+    "/favicon.ico": {
+        "statuscode": 204,
+        "FileName": "favicon.ico"
+    },
+    "/styles.css": {
+        "header": "text/css",
+        "FileName": "styles.css"
+    },
+    "/StatesGame": {
+        "header": "text/html",
+        "FileName": "States.htm"
+    },
+
+    "/Modules/Tween.js": {
+        "header": "text/javascript",
+        "FileName": "Tween.js"
+    },
+
+    "/States.js": {
+        "header": "text/javascript",
+        "FileName": "States.js"
+    },
+
+    "/home.js": {
+        "header": "text/javascript",
+        "FileName": "home.js" 
+    }
+}
